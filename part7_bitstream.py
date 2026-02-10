@@ -8,7 +8,8 @@
 # - A simple custom matrix multiplication layer is added to the model to show how to add custom layers in hls4ml.
 # - The configuration is modified to optimize the model for FPGA deployment. This includes changing the precision of the layers, setting the reuse factor, and most importantly removing the softmax layer.
 # 
-# Written by: Nima Ghaffarzadeh, CTTC, Barcelona, Spain, Feb 2026
+# Written by: Nima Ghaffarzadeh, Matteo Mendula
+# CTTC, Barcelona, Spain, Feb 2026
 
 from sklearn.datasets import fetch_openml
 from sklearn.model_selection import train_test_split
