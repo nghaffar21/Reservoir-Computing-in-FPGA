@@ -9,7 +9,7 @@ This guide explains how to:
 - Deploy models to the PYNQ board
 
 📄 **Full detailed guide (PDF version):**  
-Attached in this very repository, with the name FPGA_RC_Setup_Guide.pdf
+[FPGA_RC_Setup_Guide.pdf](./FPGA_RC_Setup_Guide.pdf)
 
 ---
 
@@ -288,8 +288,8 @@ This step takes time... Comment it if you just want to do inference on your PC, 
 
 You can find the modified files in this repository with the names:
 
-- `part1_getting_started.py`
-- `part7_bitstream.py`
+- [part1_getting_started.py](./part1_getting_started.py)
+- [part7_bitstream.py](./part7_bitstream.py)
 
 ---
 
