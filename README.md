@@ -260,11 +260,12 @@ https://github.com/fastmachinelearning/hls4ml-tutorial
 
 ---
 
-## Minimum Required Tutorials(The rest are for optimization)
+## Minimum Required Tutorials  
+(The rest are mainly for optimization.)
 
-- `part1_getting_started`
-- `part7a_bitstream`
-- `part7b_deployment`
+- [part1_getting_started](https://github.com/fastmachinelearning/hls4ml-tutorial/blob/main/part1_getting_started.ipynb)
+- [part7a_bitstream](https://github.com/fastmachinelearning/hls4ml-tutorial/blob/main/part7a_bitstream.ipynb)
+- [part7b_deployment](https://github.com/fastmachinelearning/hls4ml-tutorial/blob/main/part7b_deployment.ipynb)
 
 Bitstream creation line:
 
@@ -295,19 +296,19 @@ You can find the modified files in this repository with the names:
 
 ## 3.2 On the PYNQ Board
 
-If deployment errors occur:
+During deployment, you may encounter errors related to the driver file:
 
-File likely responsible:
+`axi_stream_driver.py`
 
-```
-axi_stream_driver.py
-```
+The issue is typically due to the `allocate` module.
 
-Fix:
-- Replace `allocate` module
-- Use `Xlnk` module instead
+In this repository, a modified version of the driver using the `Xlnk` module is provided:
 
-This file handles data I/O between bitstream and system.
+- [axi_stream_driver.py](./axi_stream_driver.py)
+
+Replace the original driver with this version if deployment errors occur.
+
+This driver handles data transfer between the bitstream and the system, so if additional runtime errors appear, this file is the first place to investigate.
 
 ---
 
