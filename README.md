@@ -276,7 +276,7 @@ This step takes time... Comment it if you just want to do inference on your PC, 
 
 ---
 
-## Modifications Made to the official 
+## Modifications we made to the official guide:
 
 - Converted from Keras → PyTorch
 - Removed `softmax` (heavy for FPGA build)
@@ -286,7 +286,7 @@ This step takes time... Comment it if you just want to do inference on your PC, 
 # Modified to optimize
 ```
 
-Modified files:
+You can find the modified files in this repository with the names:
 
 - `part1_getting_started.py`
 - `part7_bitstream.py`
@@ -315,19 +315,10 @@ This file handles data I/O between bitstream and system.
 
 - Vivado version mismatch
 - Missing system libraries
-- Incorrect NAT interface names
 - Driver issues in `axi_stream_driver.py`
 
 ---
 
-# 📎 Notes
+# 📎 Note
 
-- hls4ml tutorials are mostly optimization-focused.
-- For Reservoir Computing, only a subset may be needed.
 - FPGA build times can be long — be patient.
-
----
-
-# License
-
-Add your preferred license here.
