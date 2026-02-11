@@ -286,8 +286,8 @@ This step takes time... Comment it if you just want to do inference on your PC, 
 
 You can find the modified files in this repository with the names:
 
-- [part1_getting_started.py](./part1_getting_started.py)
-- [part7_bitstream.py](./part7_bitstream.py)
+- [part1_getting_started.py](./scripts/part1_getting_started.py)
+- [part7_bitstream.py](./scripts/part7_bitstream.py)
 
 ---
 
@@ -301,7 +301,7 @@ The issue is typically due to the `allocate` module.
 
 In this repository, a modified version of the driver using the `Xlnk` module is provided:
 
-- [axi_stream_driver.py](./axi_stream_driver.py)
+- [axi_stream_driver.py](./scripts/axi_stream_driver.py)
 
 Replace the original driver with this version if deployment errors occur.
 
