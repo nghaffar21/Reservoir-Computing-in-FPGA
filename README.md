@@ -316,9 +316,3 @@ This file handles data I/O between bitstream and system.
 - Vivado version mismatch
 - Missing system libraries
 - Driver issues in `axi_stream_driver.py`
-
----
-
-# 📎 Note
-
-- FPGA build times can be long — be patient.
