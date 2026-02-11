@@ -293,7 +293,7 @@ You can find the modified files in this repository with the names:
 
 ---
 
-# 3.2 On the PYNQ Board
+## 3.2 On the PYNQ Board
 
 If deployment errors occur:
 
