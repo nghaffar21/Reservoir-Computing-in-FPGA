@@ -8,6 +8,13 @@ This guide explains how to:
 - Use **hls4ml** to generate FPGA bitstreams
 - Deploy models to the PYNQ board
 
+📄 **Full detailed guide (PDF version):**  
+Attached in this very repository, with the name FPGA_RC_Setup_Guide.pdf
+
+---
+
+This README provides a structured, GitHub-friendly version of the guide.
+
 ---
 
 # 📌 System Requirements
@@ -16,7 +23,7 @@ This guide explains how to:
 - Tested on Debian (kernel 6.x)
 - PYNQ-Z1 board
 - Ethernet cable + USB cable
-- ~30GB free disk space (Vivado is large)
+- ~30GB free disk space on your PC(Vivado is large)
 
 > ⚠️ This guide assumes a Linux environment. If you use Windows or macOS, consult alternative installation guides.
 
@@ -24,7 +31,7 @@ This guide explains how to:
 
 # 1️⃣ PYNQ-Z1 Setup
 
-## 1.1 Connect the Board
+## 1.1 Connect the Board to your PC
 
 1. Connect:
    - Ethernet cable
@@ -36,13 +43,12 @@ This guide explains how to:
 
 Board is now booted.
 
-Official references:
-- https://digilent.com/reference/programmable-logic/pynq-z1/start
+Official reference:
 - https://pynq.readthedocs.io/en/v2.6.1/getting_started/pynq_z1_setup.html
 
 ---
 
-## 1.2 Configure Ethernet (Static IP)
+## 1.2 Configure Ethernet (Static IP) on your PC
 
 Check available interfaces:
 
@@ -83,14 +89,14 @@ username: xilinx
 password: xilinx
 ```
 
-To open terminal:
+To open terminal in Jupyter:
 ```
 New → Terminal
 ```
 
 ---
 
-## 1.3 Provide Internet to the PYNQ Board (NAT Setup)
+## 1.3 Provide Internet to the PYNQ Board (NAT Setup on your PC)
 
 ### Enable IP forwarding
 
@@ -131,7 +137,7 @@ sudo netfilter-persistent save
 
 ---
 
-### Configure PYNQ network
+### Configure PYNQ network(on the board)
 
 Edit:
 
@@ -166,12 +172,12 @@ ping google.com
 
 ---
 
-# 2️⃣ Install Vivado
+# 2️⃣ Install Vivado(on your PC)
 
 ## Recommended Versions
 
 - Preferred: **Vivado HLS 2020.1**
-- If errors occur: **Vivado 2019.2** (tested working)
+- If errors occur: **Vivado 2019.2** (tested working on Debian - kernel 6.x)
 
 Download from:
 https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vivado-design-tools/archive.html
@@ -248,13 +254,13 @@ Install on your PC (NOT the PYNQ board):
 pip install hls4ml
 ```
 
-Tutorial repository:
+Tutorial repository to make a simple Neural Network:
 
 https://github.com/fastmachinelearning/hls4ml-tutorial
 
 ---
 
-## Minimum Required Tutorials
+## Minimum Required Tutorials(The rest are for optimization)
 
 - `part1_getting_started`
 - `part7a_bitstream`
@@ -266,11 +272,11 @@ Bitstream creation line:
 hls_model.build(csim=False, export=True, bitfile=True)
 ```
 
-This step takes time.
+This step takes time... Comment it if you just want to do inference on your PC, and don't want to create a bitstream for the FPGA.
 
 ---
 
-## Modifications Made
+## Modifications Made to the official 
 
 - Converted from Keras → PyTorch
 - Removed `softmax` (heavy for FPGA build)
