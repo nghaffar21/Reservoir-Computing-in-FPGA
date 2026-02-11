@@ -258,9 +258,7 @@ Tutorial repository to make a simple Neural Network:
 
 https://github.com/fastmachinelearning/hls4ml-tutorial
 
----
-
-## Minimum Required Tutorials  
+Minimum Required Tutorials from the hls4ml-tutorial repo:
 (The rest are mainly for optimization.)
 
 - [part1_getting_started](https://github.com/fastmachinelearning/hls4ml-tutorial/blob/main/part1_getting_started.ipynb)
